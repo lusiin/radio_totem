@@ -1,0 +1,57 @@
+.body{
+    position: relative;
+    height: 100%;
+}
+.main{
+    position: relative;
+    height: 100%;
+}
+.loading{
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.container_i{
+    position: relative;
+    height: 100%;
+}
+
+.left-input{
+    height: 100%;
+    width: 15%;
+    z-index: 1;
+    background-color: white;
+}
+.right-input{
+    padding-top: 2%;
+    position: absolute;
+    top: 0px;
+    right: 0;
+    float: right;
+    height: 100%;
+    width: 2%;
+    z-index: 1;
+    background-color: white;
+}
+.icons{
+    margin: 0 auto;
+    width: 100%
+}
+.floatbot{
+    margin: 0 auto;
+    bottom: 0px;
+    width: 100%;
+}
+.canvas{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+}
+.p5Canvas{
+    z-index: -11;
+}

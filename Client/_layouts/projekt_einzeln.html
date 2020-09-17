@@ -1,0 +1,26 @@
+{% include head.html%}
+
+<div class="sidenav">
+<h1>{{page.titel}}</h1>
+<p>{{page.beschreibung}}</p>
+<p>{{page.technik}}</p>
+
+
+  
+{% for projekt in site['projekte']%}
+  <a class="center" href="{{projekt.url}}">{{projekt.titel}} </a>
+{% endfor%}
+
+</div>
+
+
+
+
+<div class="gallery2">
+{% for bild in page.bilder%}
+<img class="fit"; src="{{site.url}}/assets/{{page.path |replace: '_projekte/' '' |replace: '.md' ''}}/{{bild}}">
+{% endfor%}
+</div>
+
+{{content}}
+{% include footer.html%}

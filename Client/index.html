@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.1/p5.min.js"></script>
+    
+    
+    
+<style>
+   
+</style>
+    <link rel="stylesheet" href="/css/main.css"> 
+    <link rel="stylesheet" href="/css/skeleton.css"> 
+</head>
+<body>
+<main>
+    <div class="container" id="popup">
+        <button class="button-primary">Schliessen</button>
+        <img src="assets/padlet.png" style="width: 100%"; height="auto">
+        <p></p>
+    </div>
+    <div class="container_i">
+        <div class="left-input">
+            <form class="input-form">
+                <label for="name">Name</label>
+                <input class="u-full-width" type="text" id="name" name="name">
+                <label for="content">Inhalt</label>
+                <textarea class="u-full-width" type="text" id="content" name="content"></textarea>
+                <button class="button-primary">Hochladen</button>
+            </form>
+            <div class='loading'>
+                <img src='/assets/loading.gif'>
+                
+            </div>
+        </div>
+        <div class="canvas" id='myContainer'>
+
+        </div>
+        <div class="right-input">
+            <img class="icons" src="assets/home.png">
+            <img class="floatbot" src="/assets/layers.png">
+        </div>
+    </div>
+</main>
+    <script src="/JSS/client.js"></script>
+    <script src="/JSS/p5-jss.js"></script>
+<!--    <script src="/JSS/draggable.js"></script>-->
+    <script src="/JSS/textbox.js"></script>
+    
+<!--    <script src="/socket.io/socket.io.js"></script>-->
+</body>
+</html>
