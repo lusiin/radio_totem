@@ -1,0 +1,24 @@
+{
+  "name": "vermittlungsprojekt",
+  "version": "1.0.0",
+  "description": "Kunstmuseum Basel",
+  "main": "index.js",
+  "dependencies": {
+    "bad-words": "^3.0.3",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-rate-limit": "^5.1.3",
+    "mongodb": "^3.6.2",
+    "monk": "^7.3.1",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "author": "Luis M Luethi",
+  "license": "ISC"
+}

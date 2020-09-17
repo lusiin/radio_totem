@@ -1,0 +1,8 @@
+{
+    "name": "my-mongodb-api",
+    "builds": [{ "src": "index.js", "use": "@now/node-server" }],
+    "version": 2,
+    "env": {
+      "MONGODB_URI": "@my-mongodb-uri"
+    }
+  }
