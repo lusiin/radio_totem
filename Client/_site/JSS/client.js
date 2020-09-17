@@ -1,6 +1,6 @@
 const form = document.querySelector('form');
 const loadingElement = document.querySelector(".loading");
-const API_URL = window.location.hostname == "localhost" ? "http://localhost:5000/beitraege" : "https://radiototem-ae2iboqsb.vercel.app/";
+const API_URL = "https://radiototem-ae2iboqsb.vercel.app";
 
 const schliessen = document.querySelector(".container");
       
