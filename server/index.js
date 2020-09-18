@@ -20,13 +20,7 @@ const filter = new Filter();
 
 
 app.use(cors());
-app.use(express.json());
 
-app.get("/", (req, res) => {
-       res.json({
-           message: "POST"
-       });
-});
 // CORS
 express.use(function (req, res, next) {
 
@@ -38,6 +32,15 @@ express.use(function (req, res, next) {
     res.header("Access-Control-Request-Method", req.headers['access-control-request-method']);
     next();
 });
+
+app.use(express.json());
+
+app.get("/", (req, res) => {
+       res.json({
+           message: "POST"
+       });
+});
+
 
 
 app.get("/beitraege", (req, res)=> {
