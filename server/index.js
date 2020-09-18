@@ -21,7 +21,7 @@ const handler = (req, res) => {
     console.log("hi")
   }
   
-  module.exports = allowCors(handler)
+module.exports = allowCors(handler)
 
 
 const user = require(exports);
@@ -45,7 +45,7 @@ const filter = new Filter();
 app.use(cors());
 app.use(express.json());
 
-app.handler("/", (req, res) => {
+app.get("/", (req, res) => {
        res.json({
            message: "POST"
        });
@@ -53,7 +53,7 @@ app.handler("/", (req, res) => {
 
 
 
-app.handler("/beitraege", (req, res)=> {
+app.get("/beitraege", (req, res)=> {
     posts
         .find()
         .then(posts => {
