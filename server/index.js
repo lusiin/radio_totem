@@ -1,4 +1,5 @@
 const user = require("./api/handler");
+console.log(user);
 // start server: npm run dev
 // 
 
