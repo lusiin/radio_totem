@@ -1,15 +1,5 @@
-// CORS
 
-express.use(function (req, res, next) {
 
-    console.log(req.headers);
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    res.header("Access-Control-Allow-Methods", "POST,DELETE,PUT,GET,OPTIONS");
-    res.header("Access-Control-Allow-Headers", req.headers['access-control-request-headers']);
-    res.header("Access-Control-Request-Method", req.headers['access-control-request-method']);
-    next();
-});
 
 
 // start server: npm run dev
@@ -20,10 +10,6 @@ const cors = require('cors');
 const monk = require("monk");
 const Filter = require('bad-words');
 const rateLimit = require("express-rate-limit");
-
-
- 
-
 
 const app = express();
 
@@ -41,6 +27,18 @@ app.get("/", (req, res) => {
            message: "POST"
        });
 });
+// CORS
+express.use(function (req, res, next) {
+
+    console.log(req.headers);
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    res.header("Access-Control-Allow-Methods", "POST,DELETE,PUT,GET,OPTIONS");
+    res.header("Access-Control-Allow-Headers", req.headers['access-control-request-headers']);
+    res.header("Access-Control-Request-Method", req.headers['access-control-request-method']);
+    next();
+});
+
 
 app.get("/beitraege", (req, res)=> {
     posts
