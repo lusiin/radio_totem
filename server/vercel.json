@@ -5,8 +5,7 @@
     ],
     "version": 2,
     "env": {
-      "MY_KEY" : "my-mongodb-uri",
-      "SECRET": "@my-mongodb-uri"
+      "MONGODB_URI": "@my-mongodb-uri"
     },
     "headers": [
       {
