@@ -15,7 +15,7 @@ const allowCors = fn => async (req, res) => {
     return await fn(req, res)
   }
   
-  const handler = (req, res) => {
+const handler = (req, res) => {
     const d = new Date()
     res.end(d.toString())
     console.log("hi")
@@ -45,7 +45,7 @@ const filter = new Filter();
 app.use(cors());
 app.use(express.json());
 
-app.get("/", (req, res) => {
+app.handler("/", (req, res) => {
        res.json({
            message: "POST"
        });
@@ -53,7 +53,7 @@ app.get("/", (req, res) => {
 
 
 
-app.get("/beitraege", (req, res)=> {
+app.handler("/beitraege", (req, res)=> {
     posts
         .find()
         .then(posts => {
