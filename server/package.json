@@ -12,11 +12,10 @@
     "monk": "^7.3.1",
     "morgan": "^1.10.0",
     "vercel": "^20.1.0"
-
   },
   "optionalDependencies": {
     "fsevents": "^2.0.7"
-},
+  },
   "devDependencies": {
     "nodemon": "^2.0.4"
   },
@@ -25,5 +24,10 @@
     "dev": "nodemon index.js"
   },
   "author": "Luis M Luethi",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/lusiin/radio_totem.git"
+  }
+  
 }
