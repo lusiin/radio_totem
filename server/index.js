@@ -23,7 +23,7 @@ const allowCors = fn => async (req, res) => {
   module.exports = allowCors(handler)
 
 
-
+const user = require(exports);
 // start server: npm run dev
 // 
 
