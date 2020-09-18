@@ -38,24 +38,25 @@ const filter = new Filter();
 
 
 app.use(cors());
+
 app.use(express.json());
 
-allowCors(app.get("/", (req, res) => {
+app.get("/", (req, res) => {
        res.json({
            message: "POST"
        });
-}));
+});
 
 
 
-allowCors(app.get("/beitraege", (req, res)=> {
+app.get("/beitraege", (req, res)=> {
     posts
         .find()
         .then(posts => {
             res.json(posts)
         })
 
-}));
+})
 
 function isValidPost(post){
     return post.name && post.name.toString().trim() !== "" &&
@@ -67,7 +68,7 @@ app.use(rateLimit({
     max: 1 // limit each IP to 100 requests per windowMs
   }));
 
-allowCors(app.post("/beitraege", (req, res) => {
+app.post("/beitraege", (req, res) => {
     if (isValidPost(req.body)){
         const post = {
             name: filter.clean(req.body.name.toString()),
@@ -90,7 +91,7 @@ allowCors(app.post("/beitraege", (req, res) => {
            message: "Hey, Titel und Inhalt werden benötigt!" 
         });
     }
-}));
+});
 
 app.listen(5000, () => {
   console.log('Listening on http://localhost:5000');
