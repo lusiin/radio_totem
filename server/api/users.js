@@ -1,10 +1,4 @@
-const url = require('url')
-const MongoClient = require('mongodb').MongoClient
-
-// Create cached connection variable
-let cachedDb = null
-
-//Cors
+//CORS
 
 const allowCors = fn => async (req, res) => {
   res.setHeader('Access-Control-Allow-Credentials', true)
@@ -29,6 +23,15 @@ const handler = (req, res) => {
 }
 
 module.exports = allowCors(handler)
+
+//MONGODB
+
+const url = require('url')
+const MongoClient = require('mongodb').MongoClient
+
+// Create cached connection variable
+let cachedDb = null
+
 
 // A function for connecting to MongoDB,
 // taking a single parameter of the connection string
