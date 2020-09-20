@@ -17,7 +17,7 @@ const filter = new Filter();
 
 
 app.use(cors());
-app.use("/beitraege", corsserver);
+app.use("/", corsserver);
 app.use(express.json());
 
 app.get("/", (req, res) => {
