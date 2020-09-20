@@ -1,6 +1,6 @@
 const form = document.querySelector('form');
 const loadingElement = document.querySelector(".loading");
-const API_URL = "https://client-tan-chi.vercel.app/";
+const API_URL = "https://client-tan-chi.vercel.app";
 
 const schliessen = document.querySelector(".container");
       
