@@ -19,6 +19,24 @@ const handler = (req, res) => {
   const d = new Date()
   res.end(d.toString())
 }
+const express = require("express");
+const cors = require('cors');
+const monk = require("monk");
+const Filter = require('bad-words');
+const rateLimit = require("express-rate-limit");
+
+const app = express();
+
+
+
+const db = monk(process.env.MONGODB_URI);
+const posts = db.get("post");
+const filter = new Filter();
+
+
+app.use(cors());
+
+app.use(express.json());
 
 app.get("/", (req, res) => {
   res.json({
