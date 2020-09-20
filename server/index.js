@@ -26,8 +26,6 @@ app.get("/", (req, res) => {
        });
 });
 
-
-
 app.get("/beitraege", (req, res)=> {
     posts
         .find()
