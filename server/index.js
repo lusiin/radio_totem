@@ -9,7 +9,7 @@ const rateLimit = require("express-rate-limit");
 
 const app = express();
 
-const corsserver = require("./api/handler")
+//const corsserver = require("./api/handler")
 
 const db = monk(process.env.MONGODB_URI);
 const posts = db.get("post");
@@ -17,7 +17,7 @@ const filter = new Filter();
 
 
 app.use(cors());
-app.use("/", corsserver);
+/*app.use("/", corsserver);*/
 app.use(express.json());
 
 app.get("/", (req, res) => {
